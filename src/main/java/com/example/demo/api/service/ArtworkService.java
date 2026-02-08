@@ -11,11 +11,7 @@ import java.util.Optional;
 @Service
 public class ArtworkService {
     @Autowired
-    private final ArtworkRepository artworkRepository;
-
-    public ArtworkService(ArtworkRepository artworkRepository) {
-        this.artworkRepository = artworkRepository;
-    }
+    private ArtworkRepository artworkRepository;
 
     public void createArtwork(Artwork artwork) {
         artworkRepository.save(artwork);

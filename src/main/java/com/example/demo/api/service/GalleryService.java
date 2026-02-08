@@ -11,11 +11,7 @@ import java.util.Optional;
 @Service
 public class GalleryService {
     @Autowired
-    private final GalleryRepository galleryRepository;
-
-    public GalleryService(GalleryRepository galleryRepository) {
-        this.galleryRepository = galleryRepository;
-    }
+    private GalleryRepository galleryRepository;
 
     public void createGallery(Gallery gallery) {
         galleryRepository.save(gallery);

@@ -11,11 +11,7 @@ import java.util.Optional;
 @Service
 public class ArtistService {
     @Autowired
-    private final ArtistRepository artistRepository;
-
-    public ArtistService(ArtistRepository artistRepository) {
-        this.artistRepository = artistRepository;
-    }
+    private ArtistRepository artistRepository;
 
     public void createArtist(Artist artist) {
         artistRepository.save(artist);
