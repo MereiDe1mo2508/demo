@@ -1,44 +1,43 @@
 package com.example.demo.api.controller;
-import com.example.demo.api.model.Artwork;
-import com.example.demo.api.service.ArtworkService;
+import com.example.demo.api.Repository.ArtworkRepository;
+import com.example.demo.api.model.ArtworkDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.sql.SQLException;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/artwork")
 
 public class ArtworkController {
     @Autowired
-    public ArtworkService artworkService;
-    @GetMapping
-    public List<Artwork> getAllArtworks() {
-        return artworkService.getAllArtworks();
+    private final ArtworkRepository artworkRepository;
+
+    public ArtworkController(ArtworkRepository artworkRepository) {
+        this.artworkRepository = artworkRepository;
     }
 
-    @GetMapping("/id")
-    public ResponseEntity<Artwork> getArtworkById(@PathVariable Long id){
-        Optional<Artwork> artwork = artworkService.getArtworkById(id);
-        return artwork.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    @GetMapping
+    public List<ArtworkDto> getAllArtworks() throws SQLException {
+        return artworkRepository.findAll();
     }
 
     @PostMapping
-    public Artwork createArtwork(@RequestBody Artwork newArtwork) {
-        artworkService.createArtwork(newArtwork);
-        return newArtwork;
+    public String createArtwork(@RequestBody ArtworkDto newArtwork) throws SQLException{
+        artworkRepository.save(newArtwork);
+        return "New artwork added";
     }
 
     @PutMapping("/id")
-    public ResponseEntity<Artwork> updateArtwork(@RequestBody Artwork artworkDetails, @PathVariable Long id) {
-        Artwork updatedArtist = artworkService.updateArtwork(id, artworkDetails);
-        return ResponseEntity.ok(updatedArtist);
+    public String updateArtwork(@PathVariable Long id, @RequestBody ArtworkDto artworkDetails) throws SQLException {
+        int rows = artworkRepository.updateById(id, artworkDetails);
+        return (rows > 0) ? "Artwork updated" : "Artwork not found";
     }
 
     @DeleteMapping("/id")
-    public ResponseEntity<Void> deleteArtwork(@PathVariable Long id) {
-        artworkService.deleteArtwork(id);
-        return ResponseEntity.noContent().build();
+    public String deleteArtwork(@PathVariable Long id) throws SQLException{
+        int rows = artworkRepository.deleteById(id);
+        return (rows > 0) ? "Artwork deleted" : "Artwork not found";
     }
 }

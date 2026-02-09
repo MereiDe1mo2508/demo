@@ -1,18 +1,10 @@
 package com.example.demo.api.model;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-public class Gallery {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class GalleryDto {
     private Long id;
     private String name;
     private String location;
     //--Constructors
-    public Gallery(Long id, String name, String location) {
+    public GalleryDto(Long id, String name, String location) {
         this.id = id;
         this.name = name;
         this.location = location;

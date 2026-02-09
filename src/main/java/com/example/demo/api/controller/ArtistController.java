@@ -1,42 +1,43 @@
 package com.example.demo.api.controller;
-import com.example.demo.api.model.Artist;
-import com.example.demo.api.service.ArtistService;
+import com.example.demo.api.Repository.ArtistRepository;
+import com.example.demo.api.model.ArtistDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.sql.SQLException;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/artist")
 
 public class ArtistController {
     @Autowired
-    public ArtistService artistService;
-    @GetMapping
-    public List<Artist> getAllArtists(){
-        return artistService.getAllArtists();
+    private final ArtistRepository artistRepository;
+
+    public ArtistController(ArtistRepository artistRepository) {
+        this.artistRepository = artistRepository;
     }
 
-    @GetMapping("/id")
-    public ResponseEntity<Artist> getArtistById(@PathVariable Long id){
-        Optional<Artist> artist = artistService.getArtistById(id);
-        return artist.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    @GetMapping
+    public List<ArtistDto> getAllArtists() throws SQLException {
+        return artistRepository.findAll();
     }
+
     @PostMapping
-    public Artist createArtist(@RequestBody Artist newArtist) {
-        artistService.createArtist(newArtist);
-        return newArtist;
+    public String createArtist(@RequestBody ArtistDto newArtist) throws SQLException{
+        artistRepository.save(newArtist);
+        return "New artist added";
     }
+
     @PutMapping("/id")
-    public ResponseEntity<Artist> updateArtist(@RequestBody Artist artistDetails, @PathVariable Long id) {
-        Artist updatedArtist = artistService.updateArtist(id, artistDetails);
-        return ResponseEntity.ok(updatedArtist);
+    public String updateArtist(@PathVariable Long id, @RequestBody ArtistDto artistDetails) throws SQLException {
+        int rows = artistRepository.updateById(id, artistDetails);
+        return (rows > 0) ? "Artwork updated" : "Artwork not found";
     }
 
     @DeleteMapping("/id")
-    public ResponseEntity<Void> deleteArtist(@PathVariable Long id) {
-        artistService.deleteArtist(id);
-        return ResponseEntity.noContent().build();
+    public String deleteArtist(@PathVariable Long id) throws SQLException{
+        int rows = artistRepository.deleteById(id);
+        return (rows > 0) ? "Artwork deleted" : "Artwork not found";
     }
 }

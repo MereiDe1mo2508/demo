@@ -1,11 +1,10 @@
 package com.example.demo.api.model;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class Artwork {
+public class ArtworkDto {
     //--Attributes--
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +16,7 @@ public class Artwork {
     private int price;
 
     //--Constructors
-    public Artwork(Long id, String title, String artist, int date, boolean copyrighted, int price) {
+    public ArtworkDto(Long id, String title, String artist, int date, boolean copyrighted, int price) {
         this.id = id;
         this.title = title;
         this.artist = artist;

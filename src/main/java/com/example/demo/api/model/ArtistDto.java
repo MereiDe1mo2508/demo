@@ -1,24 +1,17 @@
 package com.example.demo.api.model;
-
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-public class Artist {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ArtistDto {
     //--Attributes--
     private Long id;
     private String name;
     private int age;
-    private boolean isAlive;
+    private Long artwork_id;
 
     //--Constructors--
-    public Artist(Long id, String name, int age, boolean isAlive) {
+    public ArtistDto(Long id, String name, int age, Long artwork_id) {
         this.id = id;
         this.name = name;
         this.age = age;
-        this.isAlive = isAlive;
+        this.artwork_id = artwork_id;
     }
 
     public Long getId() {
@@ -39,10 +32,10 @@ public class Artist {
     public void setAge(int age) {
         this.age = age;
     }
-    public boolean getIsAlive() {
-        return isAlive;
+    public Long getArtwork_id() {
+        return artwork_id;
     }
-    public void setIsAlive(boolean isAlive) {
-        this.isAlive = isAlive;
+    public void setArtwork_id(Long artwork_id) {
+        this.artwork_id = artwork_id;
     }
 }
