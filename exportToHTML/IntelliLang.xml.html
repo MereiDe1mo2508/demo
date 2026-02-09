@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>IntelliLang.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #bcbec4;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+IntelliLang.xml</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?</span><span class="s1">xml version</span><span class="s2">=&quot;1.0&quot; </span><span class="s1">encoding</span><span class="s2">=&quot;UTF-8&quot;</span><span class="s0">?&gt;</span>
+<span class="s0">&lt;project </span><span class="s1">version</span><span class="s2">=&quot;4&quot;</span><span class="s0">&gt;</span>
+  <span class="s0">&lt;component </span><span class="s1">name</span><span class="s2">=&quot;LanguageInjectionConfiguration&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;injection </span><span class="s1">language</span><span class="s2">=&quot;SpEL&quot; </span><span class="s1">injector-id</span><span class="s2">=&quot;java&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;display-name&gt;</span><span class="s3">Spring @Cacheable and @CacheEvict</span><span class="s0">&lt;/display-name&gt;</span>
+      <span class="s0">&lt;single-file </span><span class="s1">value</span><span class="s2">=&quot;true&quot; </span><span class="s0">/&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;condition&quot;).withParameters().definedInClass(&quot;org.springframework.cache.annotation.CacheEvict&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;condition&quot;).withParameters().definedInClass(&quot;org.springframework.cache.annotation.CachePut&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;condition&quot;).withParameters().definedInClass(&quot;org.springframework.cache.annotation.Cacheable&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;key&quot;).withParameters().definedInClass(&quot;org.springframework.cache.annotation.CacheEvict&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;key&quot;).withParameters().definedInClass(&quot;org.springframework.cache.annotation.CachePut&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;key&quot;).withParameters().definedInClass(&quot;org.springframework.cache.annotation.Cacheable&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;unless&quot;).withParameters().definedInClass(&quot;org.springframework.cache.annotation.CachePut&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;unless&quot;).withParameters().definedInClass(&quot;org.springframework.cache.annotation.Cacheable&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+    <span class="s0">&lt;/injection&gt;</span>
+    <span class="s0">&lt;injection </span><span class="s1">language</span><span class="s2">=&quot;http-header-reference&quot; </span><span class="s1">injector-id</span><span class="s2">=&quot;java&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;display-name&gt;</span><span class="s3">Spring HttpHeaders (org.springframework.http)</span><span class="s0">&lt;/display-name&gt;</span>
+      <span class="s0">&lt;single-file </span><span class="s1">value</span><span class="s2">=&quot;true&quot; </span><span class="s0">/&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;header&quot;).definedInClass(&quot;org.springframework.http.ResponseEntity.HeadersBuilder&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;header&quot;).definedInClass(&quot;org.springframework.web.servlet.function.ServerResponse.HeadersBuilder&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;set&quot;, &quot;add&quot;, &quot;addAll&quot;, &quot;getFirst&quot;, &quot;containsKey&quot;, &quot;get&quot;, &quot;put&quot;, &quot;getFirstDate&quot;, &quot;setDate&quot;, &quot;setInstant&quot;, &quot;setZonedDateTime&quot;).definedInClass(&quot;org.springframework.http.HttpHeaders&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+    <span class="s0">&lt;/injection&gt;</span>
+    <span class="s0">&lt;injection </span><span class="s1">language</span><span class="s2">=&quot;SpEL&quot; </span><span class="s1">injector-id</span><span class="s2">=&quot;java&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;display-name&gt;</span><span class="s3">Spring Integration/Messaging</span><span class="s0">&lt;/display-name&gt;</span>
+      <span class="s0">&lt;single-file </span><span class="s1">value</span><span class="s2">=&quot;true&quot; </span><span class="s0">/&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;expression&quot;).withParameters().definedInClass(&quot;org.springframework.messaging.handler.annotation.Payload&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;value&quot;).withParameters().definedInClass(&quot;org.springframework.integration.annotation.Payload&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;value&quot;).withParameters().definedInClass(&quot;org.springframework.messaging.handler.annotation.Payload&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+    <span class="s0">&lt;/injection&gt;</span>
+    <span class="s0">&lt;injection </span><span class="s1">language</span><span class="s2">=&quot;SQL&quot; </span><span class="s1">injector-id</span><span class="s2">=&quot;java&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;display-name&gt;</span><span class="s3">Spring JDBC (org.springframework.jdbc.core.JdbcOperations)</span><span class="s0">&lt;/display-name&gt;</span>
+      <span class="s0">&lt;single-file </span><span class="s1">value</span><span class="s2">=&quot;true&quot; </span><span class="s0">/&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;batchUpdate&quot;).definedInClass(&quot;org.springframework.jdbc.core.JdbcOperations&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;execute&quot;).definedInClass(&quot;org.springframework.jdbc.core.JdbcOperations&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;query&quot;).definedInClass(&quot;org.springframework.jdbc.core.JdbcOperations&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;queryForInt&quot;).definedInClass(&quot;org.springframework.jdbc.core.JdbcOperations&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;queryForList&quot;).definedInClass(&quot;org.springframework.jdbc.core.JdbcOperations&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;queryForLong&quot;).definedInClass(&quot;org.springframework.jdbc.core.JdbcOperations&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;queryForMap&quot;).definedInClass(&quot;org.springframework.jdbc.core.JdbcOperations&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;queryForObject&quot;).definedInClass(&quot;org.springframework.jdbc.core.JdbcOperations&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;queryForRowSet&quot;).definedInClass(&quot;org.springframework.jdbc.core.JdbcOperations&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;queryForStream&quot;).definedInClass(&quot;org.springframework.jdbc.core.JdbcOperations&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;sql&quot;).definedInClass(&quot;org.springframework.jdbc.core.simple.JdbcClient&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;update&quot;).definedInClass(&quot;org.springframework.jdbc.core.JdbcOperations&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+    <span class="s0">&lt;/injection&gt;</span>
+    <span class="s0">&lt;injection </span><span class="s1">language</span><span class="s2">=&quot;SQL&quot; </span><span class="s1">injector-id</span><span class="s2">=&quot;java&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;display-name&gt;</span><span class="s3">Spring JDBC (org.springframework.jdbc.core.PreparedStatementCreatorFactory)</span><span class="s0">&lt;/display-name&gt;</span>
+      <span class="s0">&lt;single-file </span><span class="s1">value</span><span class="s2">=&quot;true&quot; </span><span class="s0">/&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;PreparedStatementCreatorFactory&quot;).withParameters(&quot;java.lang.String&quot;).definedInClass(&quot;org.springframework.jdbc.core.PreparedStatementCreatorFactory&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;PreparedStatementCreatorFactory&quot;).withParameters(&quot;java.lang.String&quot;, &quot;int[]&quot;).definedInClass(&quot;org.springframework.jdbc.core.PreparedStatementCreatorFactory&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;PreparedStatementCreatorFactory&quot;).withParameters(&quot;java.lang.String&quot;, &quot;java.util.List&quot;).definedInClass(&quot;org.springframework.jdbc.core.PreparedStatementCreatorFactory&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+    <span class="s0">&lt;/injection&gt;</span>
+    <span class="s0">&lt;injection </span><span class="s1">language</span><span class="s2">=&quot;SQL&quot; </span><span class="s1">injector-id</span><span class="s2">=&quot;java&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;display-name&gt;</span><span class="s3">Spring JDBC (org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator)</span><span class="s0">&lt;/display-name&gt;</span>
+      <span class="s0">&lt;single-file </span><span class="s1">value</span><span class="s2">=&quot;true&quot; </span><span class="s0">/&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;createCustomException&quot;).withParameters(&quot;java.lang.String&quot;, &quot;java.lang.String&quot;, &quot;java.sql.SQLException&quot;, &quot;java.lang.Class&quot;).definedInClass(&quot;org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;customTranslate&quot;).withParameters(&quot;java.lang.String&quot;, &quot;java.lang.String&quot;, &quot;java.sql.SQLException&quot;).definedInClass(&quot;org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;doTranslate&quot;).withParameters(&quot;java.lang.String&quot;, &quot;java.lang.String&quot;, &quot;java.sql.SQLException&quot;).definedInClass(&quot;org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;logTranslation&quot;).withParameters(&quot;java.lang.String&quot;, &quot;java.lang.String&quot;, &quot;java.sql.SQLException&quot;, &quot;boolean&quot;).definedInClass(&quot;org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+    <span class="s0">&lt;/injection&gt;</span>
+    <span class="s0">&lt;injection </span><span class="s1">language</span><span class="s2">=&quot;SpEL&quot; </span><span class="s1">injector-id</span><span class="s2">=&quot;java&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;display-name&gt;</span><span class="s3">Spring Security @PostAuthorize/@PostFilter/@PreAuthorize/@PreFilter/@AuthenticationPrincipal</span><span class="s0">&lt;/display-name&gt;</span>
+      <span class="s0">&lt;single-file </span><span class="s1">value</span><span class="s2">=&quot;true&quot; </span><span class="s0">/&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;expression&quot;).withParameters().definedInClass(&quot;org.springframework.security.core.annotation.AuthenticationPrincipal&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;expression&quot;).withParameters().definedInClass(&quot;org.springframework.security.core.annotation.CurrentSecurityContext&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;value&quot;).withParameters().definedInClass(&quot;org.springframework.security.access.prepost.PostAuthorize&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;value&quot;).withParameters().definedInClass(&quot;org.springframework.security.access.prepost.PostFilter&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;value&quot;).withParameters().definedInClass(&quot;org.springframework.security.access.prepost.PreAuthorize&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiMethod().withName(&quot;value&quot;).withParameters().definedInClass(&quot;org.springframework.security.access.prepost.PreFilter&quot;)]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+    <span class="s0">&lt;/injection&gt;</span>
+    <span class="s0">&lt;injection </span><span class="s1">language</span><span class="s2">=&quot;SpEL&quot; </span><span class="s1">injector-id</span><span class="s2">=&quot;java&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;display-name&gt;</span><span class="s3">Spring State Machine</span><span class="s0">&lt;/display-name&gt;</span>
+      <span class="s0">&lt;single-file </span><span class="s1">value</span><span class="s2">=&quot;true&quot; </span><span class="s0">/&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;event&quot;).withParameters(&quot;java.lang.String&quot;).definedInClass(&quot;org.springframework.statemachine.config.configurers.SecurityConfigurer&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;guardExpression&quot;).withParameters(&quot;java.lang.String&quot;).definedInClass(&quot;org.springframework.statemachine.config.configurers.TransitionConfigurer&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;secured&quot;).withParameters(&quot;java.lang.String&quot;).definedInClass(&quot;org.springframework.statemachine.config.configurers.TransitionConfigurer&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[psiParameter().ofMethod(0, psiMethod().withName(&quot;transition&quot;).withParameters(&quot;java.lang.String&quot;).definedInClass(&quot;org.springframework.statemachine.config.configurers.SecurityConfigurer&quot;))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+    <span class="s0">&lt;/injection&gt;</span>
+    <span class="s0">&lt;injection </span><span class="s1">language</span><span class="s2">=&quot;SpEL&quot; </span><span class="s1">injector-id</span><span class="s2">=&quot;xml&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;display-name&gt;</span><span class="s3">SpEL for Spring Cache</span><span class="s0">&lt;/display-name&gt;</span>
+      <span class="s0">&lt;single-file </span><span class="s1">value</span><span class="s2">=&quot;true&quot; </span><span class="s0">/&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[xmlAttribute().withLocalName(&quot;condition&quot;).withParent(xmlTag().withNamespace(string().equalTo(&quot;http://www.springframework.org/schema/cache&quot;)))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[xmlAttribute().withLocalName(&quot;key&quot;).withParent(xmlTag().withNamespace(string().equalTo(&quot;http://www.springframework.org/schema/cache&quot;)))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+      <span class="s0">&lt;place&gt;</span><span class="s3">&lt;![CDATA[xmlAttribute().withLocalName(&quot;unless&quot;).withParent(xmlTag().withNamespace(string().equalTo(&quot;http://www.springframework.org/schema/cache&quot;)))]]&gt;</span><span class="s0">&lt;/place&gt;</span>
+    <span class="s0">&lt;/injection&gt;</span>
+  <span class="s0">&lt;/component&gt;</span>
+<span class="s0">&lt;/project&gt;</span></pre>
+</body>
+</html>

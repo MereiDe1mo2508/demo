@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>ArtworkDto.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ArtworkDto.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">demo</span><span class="s2">.</span><span class="s1">api</span><span class="s2">.</span><span class="s1">model</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">jakarta</span><span class="s2">.</span><span class="s1">persistence</span><span class="s2">.</span><span class="s1">GeneratedValue</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">jakarta</span><span class="s2">.</span><span class="s1">persistence</span><span class="s2">.</span><span class="s1">GenerationType</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">jakarta</span><span class="s2">.</span><span class="s1">persistence</span><span class="s2">.</span><span class="s1">Id</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">ArtworkDto </span><span class="s2">{</span>
+    <span class="s3">//--Attributes--</span>
+    <span class="s1">@Id</span>
+    <span class="s1">@GeneratedValue</span><span class="s2">(</span><span class="s1">strategy </span><span class="s2">= </span><span class="s1">GenerationType</span><span class="s2">.</span><span class="s1">IDENTITY</span><span class="s2">)</span>
+    <span class="s0">private </span><span class="s1">Long id</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String title</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String artist</span><span class="s2">;</span>
+    <span class="s0">private int </span><span class="s1">date</span><span class="s2">;</span>
+    <span class="s0">private boolean </span><span class="s1">copyrighted</span><span class="s2">;</span>
+    <span class="s0">private int </span><span class="s1">price</span><span class="s2">;</span>
+
+    <span class="s3">//--Constructors</span>
+    <span class="s0">public </span><span class="s1">ArtworkDto</span><span class="s2">(</span><span class="s1">Long id</span><span class="s2">, </span><span class="s1">String title</span><span class="s2">, </span><span class="s1">String artist</span><span class="s2">, </span><span class="s0">int </span><span class="s1">date</span><span class="s2">, </span><span class="s0">boolean </span><span class="s1">copyrighted</span><span class="s2">, </span><span class="s0">int </span><span class="s1">price</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">id </span><span class="s2">= </span><span class="s1">id</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">title </span><span class="s2">= </span><span class="s1">title</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">artist </span><span class="s2">= </span><span class="s1">artist</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">date </span><span class="s2">= </span><span class="s1">date</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">copyrighted </span><span class="s2">= </span><span class="s1">copyrighted</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">price </span><span class="s2">= </span><span class="s1">price</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s3">//--Getters and Setters</span>
+    <span class="s0">public </span><span class="s1">Long getId</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">id</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">setId</span><span class="s2">(</span><span class="s1">Long id</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">id </span><span class="s2">= </span><span class="s1">id</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">String getTitle</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">title</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">setTitle</span><span class="s2">(</span><span class="s1">String title</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">title </span><span class="s2">= </span><span class="s1">title</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">String getArtist</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">artist</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">setArtist</span><span class="s2">(</span><span class="s1">String artist</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">artist </span><span class="s2">= </span><span class="s1">artist</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public int </span><span class="s1">getDate</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">date</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">setDate</span><span class="s2">(</span><span class="s0">int </span><span class="s1">date</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">date </span><span class="s2">= </span><span class="s1">date</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public boolean </span><span class="s1">getCopyrighted</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">copyrighted</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">setCopyrighted</span><span class="s2">(</span><span class="s0">boolean </span><span class="s1">copyrighted</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">copyrighted </span><span class="s2">= </span><span class="s1">copyrighted</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public int </span><span class="s1">getPrice</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">price</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">setPrice</span><span class="s2">(</span><span class="s0">int </span><span class="s1">price</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">price </span><span class="s2">= </span><span class="s1">price</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s3">//--Methods--</span>
+    <span class="s0">public void </span><span class="s1">printInfo</span><span class="s2">() {</span>
+        <span class="s1">String status</span><span class="s2">;</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">copyrighted</span><span class="s2">) {</span>
+            <span class="s1">status </span><span class="s2">= </span><span class="s4">&quot;Copyrighted&quot;</span><span class="s2">;</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Title: &quot; </span><span class="s2">+ </span><span class="s1">title </span><span class="s2">+ </span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Artist: &quot; </span><span class="s2">+ </span><span class="s1">artist </span><span class="s2">+ </span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Created: &quot; </span><span class="s2">+ </span><span class="s1">date </span><span class="s2">+ </span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Status: &quot; </span><span class="s2">+ </span><span class="s1">status </span><span class="s2">+ </span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Price: &quot; </span><span class="s2">+ </span><span class="s1">price</span><span class="s2">);</span>
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">status </span><span class="s2">= </span><span class="s4">&quot;Not copyrighted&quot;</span><span class="s2">;</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Title: &quot; </span><span class="s2">+ </span><span class="s1">title </span><span class="s2">+ </span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Artist: &quot; </span><span class="s2">+ </span><span class="s1">artist </span><span class="s2">+ </span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Created: &quot; </span><span class="s2">+ </span><span class="s1">date </span><span class="s2">+ </span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Status: &quot; </span><span class="s2">+ </span><span class="s1">status </span><span class="s2">+ </span><span class="s4">&quot;</span><span class="s0">\n</span><span class="s4">Price: &quot; </span><span class="s2">+ </span><span class="s1">price</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<html>
+<head>
+<title>REST API basics- CRUD, test & variable.postman_collection.json</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+REST API basics- CRUD, test & variable.postman_collection.json</font>
+</center></td></tr></table>
+<pre><span class="s0">{</span>
+  <span class="s2">&quot;info&quot;</span><span class="s0">: {</span>
+    <span class="s2">&quot;_postman_id&quot;</span><span class="s0">: </span><span class="s2">&quot;7a25f0a2-f547-4ef3-a144-5157aa70e3d4&quot;</span><span class="s0">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="s0">: </span><span class="s2">&quot;REST API basics: CRUD, test &amp; variable&quot;</span><span class="s0">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="s0">: </span><span class="s2">&quot;# 🚀 Get started here</span><span class="s3">\n\n</span><span class="s2">This template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.</span><span class="s3">\n\n</span><span class="s2">## 🔖 **How to use this template**</span><span class="s3">\n\n</span><span class="s2">#### **Step 1: Send requests**</span><span class="s3">\n\n</span><span class="s2">RESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.</span><span class="s3">\n\n</span><span class="s2">This collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click </span><span class="s3">\&quot;</span><span class="s2">Send</span><span class="s3">\&quot; </span><span class="s2">to see what happens.</span><span class="s3">\n\n</span><span class="s2">#### **Step 2: View responses**</span><span class="s3">\n\n</span><span class="s2">Observe the response tab for status code (200 OK), response time, and size.</span><span class="s3">\n\n</span><span class="s2">#### **Step 3: Send new Body data**</span><span class="s3">\n\n</span><span class="s2">Update or add new data in </span><span class="s3">\&quot;</span><span class="s2">Body</span><span class="s3">\&quot; </span><span class="s2">in the POST request. Typically, Body data is also used in PUT request.</span><span class="s3">\n\n</span><span class="s2">```</span><span class="s3">\n</span><span class="s2">{</span><span class="s3">\n    \&quot;</span><span class="s2">name</span><span class="s3">\&quot;</span><span class="s2">: </span><span class="s3">\&quot;</span><span class="s2">Add your name in the body</span><span class="s3">\&quot;\n</span><span class="s2">}</span><span class="s3">\n\n </span><span class="s2">```</span><span class="s3">\n\n</span><span class="s2">#### **Step 4: Update the variable**</span><span class="s3">\n\n</span><span class="s2">Variables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.</span><span class="s3">\n\n</span><span class="s2">#### **Step 5: Add tests in the </span><span class="s3">\&quot;</span><span class="s2">Scripts</span><span class="s3">\&quot; </span><span class="s2">tab**</span><span class="s3">\n\n</span><span class="s2">Adding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the </span><span class="s3">\&quot;</span><span class="s2">Test Results</span><span class="s3">\&quot; </span><span class="s2">tab.</span><span class="s3">\n\n</span><span class="s2">&lt;img src=</span><span class="s3">\&quot;</span><span class="s2">https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n</span><span class="s3">\&quot; </span><span class="s2">alt=</span><span class="s3">\&quot;\&quot; </span><span class="s2">height=</span><span class="s3">\&quot;</span><span class="s2">1530</span><span class="s3">\&quot; </span><span class="s2">width=</span><span class="s3">\&quot;</span><span class="s2">2162</span><span class="s3">\&quot;</span><span class="s2">&gt;</span><span class="s3">\n\n</span><span class="s2">## 💪 Pro tips</span><span class="s3">\n\n</span><span class="s2">- Use folders to group related requests and organize the collection.</span><span class="s3">\n    \n</span><span class="s2">- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.</span><span class="s3">\n    \n\n</span><span class="s2">## 💡Related templates</span><span class="s3">\n\n</span><span class="s2">[API testing basics](https://go.postman.co/redirect/workspace?type=personal&amp;collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&amp;sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  </span><span class="s3">\n</span><span class="s2">[API documentation](https://go.postman.co/redirect/workspace?type=personal&amp;collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&amp;sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  </span><span class="s3">\n</span><span class="s2">[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&amp;collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&amp;sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)&quot;</span><span class="s0">,</span>
+    <span class="s2">&quot;schema&quot;</span><span class="s0">: </span><span class="s2">&quot;https://schema.getpostman.com/json/collection/v2.1.0/collection.json&quot;</span><span class="s0">,</span>
+    <span class="s2">&quot;_exporter_id&quot;</span><span class="s0">: </span><span class="s2">&quot;52086461&quot;</span><span class="s0">,</span>
+    <span class="s2">&quot;_collection_link&quot;</span><span class="s0">: </span><span class="s2">&quot;https://go.postman.co/collection/52086461-7a25f0a2-f547-4ef3-a144-5157aa70e3d4?source=collection_link&quot;</span>
+  <span class="s0">},</span>
+  <span class="s2">&quot;item&quot;</span><span class="s0">: [</span>
+    <span class="s0">{</span>
+      <span class="s2">&quot;name&quot;</span><span class="s0">: </span><span class="s2">&quot;Get data&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;event&quot;</span><span class="s0">: [</span>
+        <span class="s0">{</span>
+          <span class="s2">&quot;listen&quot;</span><span class="s0">: </span><span class="s2">&quot;test&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;script&quot;</span><span class="s0">: {</span>
+            <span class="s2">&quot;type&quot;</span><span class="s0">: </span><span class="s2">&quot;text/javascript&quot;</span><span class="s0">,</span>
+            <span class="s2">&quot;exec&quot;</span><span class="s0">: [</span>
+              <span class="s2">&quot;pm.test(</span><span class="s3">\&quot;</span><span class="s2">Status code is 200</span><span class="s3">\&quot;</span><span class="s2">, function () {&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;    pm.response.to.have.status(200);&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;});&quot;</span>
+            <span class="s0">]</span>
+          <span class="s0">}</span>
+        <span class="s0">}</span>
+      <span class="s0">],</span>
+      <span class="s2">&quot;request&quot;</span><span class="s0">: {</span>
+        <span class="s2">&quot;method&quot;</span><span class="s0">: </span><span class="s2">&quot;GET&quot;</span><span class="s0">,</span>
+        <span class="s2">&quot;header&quot;</span><span class="s0">: [],</span>
+        <span class="s2">&quot;url&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;raw&quot;</span><span class="s0">: </span><span class="s2">&quot;{{base_url}}/info?id=1&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;host&quot;</span><span class="s0">: [</span>
+            <span class="s2">&quot;{{base_url}}&quot;</span>
+          <span class="s0">],</span>
+          <span class="s2">&quot;path&quot;</span><span class="s0">: [</span>
+            <span class="s2">&quot;info&quot;</span>
+          <span class="s0">],</span>
+          <span class="s2">&quot;query&quot;</span><span class="s0">: [</span>
+            <span class="s0">{</span>
+              <span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;id&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;1&quot;</span>
+            <span class="s0">}</span>
+          <span class="s0">]</span>
+        <span class="s0">},</span>
+        <span class="s2">&quot;description&quot;</span><span class="s0">: </span><span class="s2">&quot;This is a GET request and it is used to </span><span class="s3">\&quot;</span><span class="s2">get</span><span class="s3">\&quot; </span><span class="s2">data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).</span><span class="s3">\n\n</span><span class="s2">A successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data.&quot;</span>
+      <span class="s0">},</span>
+      <span class="s2">&quot;response&quot;</span><span class="s0">: []</span>
+    <span class="s0">},</span>
+    <span class="s0">{</span>
+      <span class="s2">&quot;name&quot;</span><span class="s0">: </span><span class="s2">&quot;Post data&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;event&quot;</span><span class="s0">: [</span>
+        <span class="s0">{</span>
+          <span class="s2">&quot;listen&quot;</span><span class="s0">: </span><span class="s2">&quot;test&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;script&quot;</span><span class="s0">: {</span>
+            <span class="s2">&quot;type&quot;</span><span class="s0">: </span><span class="s2">&quot;text/javascript&quot;</span><span class="s0">,</span>
+            <span class="s2">&quot;exec&quot;</span><span class="s0">: [</span>
+              <span class="s2">&quot;pm.test(</span><span class="s3">\&quot;</span><span class="s2">Successful POST request</span><span class="s3">\&quot;</span><span class="s2">, function () {&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;    pm.expect(pm.response.code).to.be.oneOf([200, 201]);&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;});&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;&quot;</span>
+            <span class="s0">]</span>
+          <span class="s0">}</span>
+        <span class="s0">}</span>
+      <span class="s0">],</span>
+      <span class="s2">&quot;request&quot;</span><span class="s0">: {</span>
+        <span class="s2">&quot;method&quot;</span><span class="s0">: </span><span class="s2">&quot;POST&quot;</span><span class="s0">,</span>
+        <span class="s2">&quot;header&quot;</span><span class="s0">: [],</span>
+        <span class="s2">&quot;body&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;mode&quot;</span><span class="s0">: </span><span class="s2">&quot;raw&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;raw&quot;</span><span class="s0">: </span><span class="s2">&quot;{</span><span class="s3">\n\t\&quot;</span><span class="s2">name</span><span class="s3">\&quot;</span><span class="s2">: </span><span class="s3">\&quot;</span><span class="s2">Add your name in the body</span><span class="s3">\&quot;\n</span><span class="s2">}&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;options&quot;</span><span class="s0">: {</span>
+            <span class="s2">&quot;raw&quot;</span><span class="s0">: {</span>
+              <span class="s2">&quot;language&quot;</span><span class="s0">: </span><span class="s2">&quot;json&quot;</span>
+            <span class="s0">}</span>
+          <span class="s0">}</span>
+        <span class="s0">},</span>
+        <span class="s2">&quot;url&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;raw&quot;</span><span class="s0">: </span><span class="s2">&quot;{{base_url}}/info&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;host&quot;</span><span class="s0">: [</span>
+            <span class="s2">&quot;{{base_url}}&quot;</span>
+          <span class="s0">],</span>
+          <span class="s2">&quot;path&quot;</span><span class="s0">: [</span>
+            <span class="s2">&quot;info&quot;</span>
+          <span class="s0">]</span>
+        <span class="s0">},</span>
+        <span class="s2">&quot;description&quot;</span><span class="s0">: </span><span class="s2">&quot;This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.</span><span class="s3">\n\n</span><span class="s2">A successful POST request typically returns a `200 OK` or `201 Created` response code.&quot;</span>
+      <span class="s0">},</span>
+      <span class="s2">&quot;response&quot;</span><span class="s0">: []</span>
+    <span class="s0">},</span>
+    <span class="s0">{</span>
+      <span class="s2">&quot;name&quot;</span><span class="s0">: </span><span class="s2">&quot;Update data&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;event&quot;</span><span class="s0">: [</span>
+        <span class="s0">{</span>
+          <span class="s2">&quot;listen&quot;</span><span class="s0">: </span><span class="s2">&quot;test&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;script&quot;</span><span class="s0">: {</span>
+            <span class="s2">&quot;type&quot;</span><span class="s0">: </span><span class="s2">&quot;text/javascript&quot;</span><span class="s0">,</span>
+            <span class="s2">&quot;exec&quot;</span><span class="s0">: [</span>
+              <span class="s2">&quot;pm.test(</span><span class="s3">\&quot;</span><span class="s2">Successful PUT request</span><span class="s3">\&quot;</span><span class="s2">, function () {&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;});&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;&quot;</span>
+            <span class="s0">]</span>
+          <span class="s0">}</span>
+        <span class="s0">}</span>
+      <span class="s0">],</span>
+      <span class="s2">&quot;request&quot;</span><span class="s0">: {</span>
+        <span class="s2">&quot;method&quot;</span><span class="s0">: </span><span class="s2">&quot;PUT&quot;</span><span class="s0">,</span>
+        <span class="s2">&quot;header&quot;</span><span class="s0">: [],</span>
+        <span class="s2">&quot;body&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;mode&quot;</span><span class="s0">: </span><span class="s2">&quot;raw&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;raw&quot;</span><span class="s0">: </span><span class="s2">&quot;{</span><span class="s3">\n\t\&quot;</span><span class="s2">name</span><span class="s3">\&quot;</span><span class="s2">: </span><span class="s3">\&quot;</span><span class="s2">Add your name in the body</span><span class="s3">\&quot;\n</span><span class="s2">}&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;options&quot;</span><span class="s0">: {</span>
+            <span class="s2">&quot;raw&quot;</span><span class="s0">: {</span>
+              <span class="s2">&quot;language&quot;</span><span class="s0">: </span><span class="s2">&quot;json&quot;</span>
+            <span class="s0">}</span>
+          <span class="s0">}</span>
+        <span class="s0">},</span>
+        <span class="s2">&quot;url&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;raw&quot;</span><span class="s0">: </span><span class="s2">&quot;{{base_url}}/info?id=1&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;host&quot;</span><span class="s0">: [</span>
+            <span class="s2">&quot;{{base_url}}&quot;</span>
+          <span class="s0">],</span>
+          <span class="s2">&quot;path&quot;</span><span class="s0">: [</span>
+            <span class="s2">&quot;info&quot;</span>
+          <span class="s0">],</span>
+          <span class="s2">&quot;query&quot;</span><span class="s0">: [</span>
+            <span class="s0">{</span>
+              <span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;id&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;1&quot;</span>
+            <span class="s0">}</span>
+          <span class="s0">]</span>
+        <span class="s0">},</span>
+        <span class="s2">&quot;description&quot;</span><span class="s0">: </span><span class="s2">&quot;This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).</span><span class="s3">\n\n</span><span class="s2">A successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code.&quot;</span>
+      <span class="s0">},</span>
+      <span class="s2">&quot;response&quot;</span><span class="s0">: []</span>
+    <span class="s0">},</span>
+    <span class="s0">{</span>
+      <span class="s2">&quot;name&quot;</span><span class="s0">: </span><span class="s2">&quot;Delete data&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;event&quot;</span><span class="s0">: [</span>
+        <span class="s0">{</span>
+          <span class="s2">&quot;listen&quot;</span><span class="s0">: </span><span class="s2">&quot;test&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;script&quot;</span><span class="s0">: {</span>
+            <span class="s2">&quot;type&quot;</span><span class="s0">: </span><span class="s2">&quot;text/javascript&quot;</span><span class="s0">,</span>
+            <span class="s2">&quot;exec&quot;</span><span class="s0">: [</span>
+              <span class="s2">&quot;pm.test(</span><span class="s3">\&quot;</span><span class="s2">Successful DELETE request</span><span class="s3">\&quot;</span><span class="s2">, function () {&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;});&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;&quot;</span>
+            <span class="s0">]</span>
+          <span class="s0">}</span>
+        <span class="s0">}</span>
+      <span class="s0">],</span>
+      <span class="s2">&quot;request&quot;</span><span class="s0">: {</span>
+        <span class="s2">&quot;method&quot;</span><span class="s0">: </span><span class="s2">&quot;DELETE&quot;</span><span class="s0">,</span>
+        <span class="s2">&quot;header&quot;</span><span class="s0">: [],</span>
+        <span class="s2">&quot;body&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;mode&quot;</span><span class="s0">: </span><span class="s2">&quot;raw&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;raw&quot;</span><span class="s0">: </span><span class="s2">&quot;&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;options&quot;</span><span class="s0">: {</span>
+            <span class="s2">&quot;raw&quot;</span><span class="s0">: {</span>
+              <span class="s2">&quot;language&quot;</span><span class="s0">: </span><span class="s2">&quot;json&quot;</span>
+            <span class="s0">}</span>
+          <span class="s0">}</span>
+        <span class="s0">},</span>
+        <span class="s2">&quot;url&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;raw&quot;</span><span class="s0">: </span><span class="s2">&quot;{{base_url}}/info?id=1&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;host&quot;</span><span class="s0">: [</span>
+            <span class="s2">&quot;{{base_url}}&quot;</span>
+          <span class="s0">],</span>
+          <span class="s2">&quot;path&quot;</span><span class="s0">: [</span>
+            <span class="s2">&quot;info&quot;</span>
+          <span class="s0">],</span>
+          <span class="s2">&quot;query&quot;</span><span class="s0">: [</span>
+            <span class="s0">{</span>
+              <span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;id&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;1&quot;</span>
+            <span class="s0">}</span>
+          <span class="s0">]</span>
+        <span class="s0">},</span>
+        <span class="s2">&quot;description&quot;</span><span class="s0">: </span><span class="s2">&quot;This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).</span><span class="s3">\n\n</span><span class="s2">A successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code.&quot;</span>
+      <span class="s0">},</span>
+      <span class="s2">&quot;response&quot;</span><span class="s0">: []</span>
+    <span class="s0">}</span>
+  <span class="s0">],</span>
+  <span class="s2">&quot;event&quot;</span><span class="s0">: [</span>
+    <span class="s0">{</span>
+      <span class="s2">&quot;listen&quot;</span><span class="s0">: </span><span class="s2">&quot;prerequest&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;script&quot;</span><span class="s0">: {</span>
+        <span class="s2">&quot;type&quot;</span><span class="s0">: </span><span class="s2">&quot;text/javascript&quot;</span><span class="s0">,</span>
+        <span class="s2">&quot;exec&quot;</span><span class="s0">: [</span>
+          <span class="s2">&quot;&quot;</span>
+        <span class="s0">]</span>
+      <span class="s0">}</span>
+    <span class="s0">},</span>
+    <span class="s0">{</span>
+      <span class="s2">&quot;listen&quot;</span><span class="s0">: </span><span class="s2">&quot;test&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;script&quot;</span><span class="s0">: {</span>
+        <span class="s2">&quot;type&quot;</span><span class="s0">: </span><span class="s2">&quot;text/javascript&quot;</span><span class="s0">,</span>
+        <span class="s2">&quot;exec&quot;</span><span class="s0">: [</span>
+          <span class="s2">&quot;&quot;</span>
+        <span class="s0">]</span>
+      <span class="s0">}</span>
+    <span class="s0">}</span>
+  <span class="s0">],</span>
+  <span class="s2">&quot;variable&quot;</span><span class="s0">: [</span>
+    <span class="s0">{</span>
+      <span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;id&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;1&quot;</span>
+    <span class="s0">},</span>
+    <span class="s0">{</span>
+      <span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;base_url&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;https://template.postman-echo.com&quot;</span>
+    <span class="s0">}</span>
+  <span class="s0">]</span>
+<span class="s0">}</span></pre>
+</body>
+</html>

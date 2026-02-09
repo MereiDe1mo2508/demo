@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>DBConnection.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+DBConnection.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">demo</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">sql</span><span class="s2">.</span><span class="s1">Connection</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">sql</span><span class="s2">.</span><span class="s1">DriverManager</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">sql</span><span class="s2">.</span><span class="s1">SQLException</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">DBConnection </span><span class="s2">{</span>
+    <span class="s0">private static final </span><span class="s1">String URL </span><span class="s2">= </span><span class="s3">&quot;jdbc:postgresql://localhost:5432/simpledb&quot;</span><span class="s2">;</span>
+    <span class="s0">private static final </span><span class="s1">String USER </span><span class="s2">= </span><span class="s3">&quot;postgres&quot;</span><span class="s2">;</span>
+    <span class="s0">private static final </span><span class="s1">String PASSWORD </span><span class="s2">= </span><span class="s3">&quot;y1pp33&quot;</span><span class="s2">;</span>
+    <span class="s0">public static </span><span class="s1">Connection getConnection</span><span class="s2">() </span><span class="s0">throws </span><span class="s1">SQLException </span><span class="s2">{</span>
+        <span class="s0">return </span><span class="s1">DriverManager</span><span class="s2">.</span><span class="s1">getConnection</span><span class="s2">(</span><span class="s1">URL</span><span class="s2">, </span><span class="s1">USER</span><span class="s2">, </span><span class="s1">PASSWORD</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
